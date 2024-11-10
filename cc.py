@@ -271,7 +271,7 @@ def head(event,proxy_type):#HEAD MODE
 			if proxy_type == 5:
 				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]))
 			if proxy_type == 0:
-				s.set_proxy(socks.HTTP, str(proxy[0]), int(proxy[1]))
+				s.set_proxy(socks.HTTPS, str(proxy[0]), int(proxy[1]))
 			if brute:
 				s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
 			s.connect((str(target), int(port)))
@@ -304,7 +304,7 @@ def post(event,proxy_type):
 			if proxy_type == 5:
 				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]))
 			if proxy_type == 0:
-				s.set_proxy(socks.HTTP, str(proxy[0]), int(proxy[1]))
+				s.set_proxy(socks.HTTPS, str(proxy[0]), int(proxy[1]))
 			if brute:
 				s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
 			s.connect((str(target), int(port)))
@@ -406,7 +406,7 @@ def checking(lines,proxy_type,ms,rlock,):#Proxy checker coded by Leeon123
 			if proxy_type == 5:
 				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]))
 			if proxy_type == 0:
-				s.set_proxy(socks.HTTP, str(proxy[0]), int(proxy[1]))
+				s.set_proxy(socks.HTTPS, str(proxy[0]), int(proxy[1]))
 			s.settimeout(ms)
 			s.connect(("1.1.1.1", 80))
 			'''
